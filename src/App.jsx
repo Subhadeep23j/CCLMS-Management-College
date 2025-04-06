@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { BrowserRouter as Router, Routes, Route, useParams } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route, useParams } from 'react-router-dom';
 
 import Loader from './Component/Loader.jsx';
 import Navbar from './Component/Navbar';
@@ -118,31 +118,33 @@ const ApplyPage = () => (
   </div>
 );
 
-// Dynamic Course Details Page Loader
 const CourseDetails = () => {
   const { courseId } = useParams();
 
-  if (courseId === '1') return <BCACoursePage />;
-  else if (courseId === '2') return <BHMCoursePage />;
-  else if (courseId === '3') return <BBACoursePage />;
-  else {
-    return (
-      <BHMCoursePage />,
-      <BBACoursePage />,
-      <BCACoursePage />
-    
-    );
+  switch (courseId) {
+    case '1':
+      return <BCACoursePage />;
+    case '2':
+      return <BHMCoursePage />;
+    case '3':
+      return <BBACoursePage />;
+    default:
+      return (
+        <div className="text-center py-16">
+          <h2 className="text-2xl font-bold text-red-600">Course Not Found</h2>
+        </div>
+      );
   }
 };
 
+
 const App = () => {
   const [loading, setLoading] = useState(true);
-  
+
   useEffect(() => {
-    // Simulate content loading
     setTimeout(() => {
       setLoading(false);
-    }, 2000); // Show loader for 2 seconds
+    }, 2000);
   }, []);
 
   if (loading) {

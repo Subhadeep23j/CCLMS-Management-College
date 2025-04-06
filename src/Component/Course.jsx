@@ -135,16 +135,17 @@ const CourseComponent = () => {
   };
 
   const handleApplyNow = (courseId) => {
-    if (courseId === 1) {
-      navigate("/courses/bca");
+    // if (courseId === 1) {
+    //   navigate("/courses/bca");
     
-    }
-    else if (courseId === 2) {
-      navigate("/courses/bhm");
-    }
-    else {
-      navigate(`/courses/${courseId}`);
-    }
+    // }
+    // else if (courseId === 2) {
+    //   navigate("/courses/bhm");
+    // }
+    // else {
+    //   navigate(`/courses/${courseId}`);
+    // }
+    navigate(`/courses/${courseId}`);
   };
 
   return (

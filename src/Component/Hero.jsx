@@ -14,6 +14,9 @@ import google from '../assets/google.png'
 import pic1 from '../assets/re-image.jpg'
 import pic2 from '../assets/seminar1.jpg'
 import pic3 from '../assets/sports.jpg'
+import mainBuilding from '../assets/main-bulding.jpg'
+import clg2 from '../assets/clg-2.jpg'
+import alldep from '../assets/alldep.jpg'
 const HeroCarousel = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   
@@ -21,21 +24,21 @@ const HeroCarousel = () => {
   const slides = [
     {
       id: 1,
-      image: "./src/assets/main-bulding.jpg",
+      image:mainBuilding,
       title: "Welcome to Contai College of Learning & Management Science", 
       subtitle: "Shaping Tomorrow's Leaders Today",
       buttonText: "Apply Now"
     },
     {
       id: 2,
-      image: "./src/assets/clg-2.jpg",
+      image: clg2,
       title: "World-Class Research Opportunities",
       subtitle: "Making breakthroughs that change the world",
       buttonText: "Apply Now"
     },
     {
       id: 3,
-      image: "./src/assets/alldep.jpg",
+      image: alldep,
       title: "Vibrant Campus Life",
       subtitle: "Join a community of passionate learners",
       buttonText: "Apply Now"
