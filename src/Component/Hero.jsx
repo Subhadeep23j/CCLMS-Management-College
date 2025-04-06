@@ -166,7 +166,7 @@ const FeaturedContent = () => {
             <div key={index} className="bg-blue-50 rounded-lg p-6 text-center hover:shadow-lg transition-shadow">
               <div className="text-4xl mb-4">{feature.icon}</div>
               <h3 className="text-xl font-semibold text-blue-700 mb-2">{feature.title}</h3>
-              <p className="text-gray-600">{feature.description}</p>
+              <p className="text-gray-600 ">{feature.description}</p>
             </div>
           ))}
         </div>
@@ -263,7 +263,7 @@ const placements = [
   },
   {
     studentImg: 'https://randomuser.me/api/portraits/men/32.jpg',
-    companyImg: 'https://www.svgrepo.com/show/303110/apple-black-logo.svg',
+    companyImg: 'https://www.svgrepo.com/show/500767/apple.svg',
     studentName: 'Subhadeep Maity',
     companyName: 'Apple',
   },

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { ChevronRight, Clock, Calendar, BookOpen, Monitor, Code, Database, ChevronLeft, Star, Users, Briefcase } from 'lucide-react';
-
+import { Link } from 'react-router-dom';
 const BCACoursePage = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -17,29 +17,38 @@ const BCACoursePage = () => {
   }, []);
 
   // Placement testimonials and company data
-  // const placementData = [
-  //   {
-  //     name: "Sarah Johnson",
-  //     role: "Software Developer at TechCorp",
-  //     quote: "The BCA program gave me the foundation I needed to start my career in tech. The practical approach to learning helped me stand out during interviews.",
-  //     company: "TechCorp",
-  //     package: "₹8.5 LPA"
-  //   },
-  //   {
-  //     name: "Rahul Sharma",
-  //     role: "Web Developer at InnoSoft",
-  //     quote: "From someone with no coding experience to a full-time developer, the BCA program transformed my career trajectory completely.",
-  //     company: "InnoSoft",
-  //     package: "₹7.2 LPA"
-  //   },
-  //   {
-  //     name: "Priya Patel",
-  //     role: "Database Administrator at DataSphere",
-  //     quote: "The specialized database courses and industry projects helped me secure my dream role right after graduation.",
-  //     company: "DataSphere",
-  //     package: "₹9.1 LPA"
-  //   }
-  // ];
+  const placementData = [
+    {
+      name: "Pritam Das",
+      stuImg: "https://randomuser.me/api/portraits/men/32.jpg",
+      role: "Works at Google",
+      quote: "Biggest Hospital in Kolkata",
+      company: "SSKM",
+      compImg: "https://www.svgrepo.com/show/303108/google-icon-logo.svg",
+      package: "₹24 LPA",
+      
+    },
+    {
+      name: "Suhadeep Maity",
+      stuImg: "https://randomuser.me/api/portraits/men/65.jpg",
+      role: "Works at Apple",
+      quote: "Biggest Hospital in Kolkata",
+      company: "SSKM",
+      compImg: "https://www.svgrepo.com/show/500767/apple.svg",
+      package: "₹22.2 LPA",
+        
+    },
+    {
+      name: "Priyanka Jana",
+      stuImg: "https://randomuser.me/api/portraits/women/55.jpg",
+      role: "Works at IBM",
+      quote: "Biggest Hospital in Kolkata",
+      company: "SSKM",
+      compImg: "https://www.svgrepo.com/show/473655/ibm.svg",
+      package: "₹5 LPA",
+        
+    }
+  ];
 
   // Handle carousel navigation
   const nextSlide = () => {
@@ -76,7 +85,7 @@ const BCACoursePage = () => {
               <span class='text-blue-700 font-bold'>Intake: January & July</span>
             </div>
             <div className="flex items-center bg-white bg-opacity-20 backdrop-filter backdrop-blur-sm px-4 py-2 rounded-full">
-              <BookOpen size={18} className="mr-2 " />
+              <BookOpen size={18} className="mr-2 text-blue-700" />
               <span class='text-blue-700 font-bold'>120 Credits</span>
             </div>
           </div>
@@ -154,9 +163,9 @@ const BCACoursePage = () => {
             </div>
           </div>
           
-          {/* <div className="rounded-lg overflow-hidden shadow-md h-64 md:h-auto">
-            <img src={pic1} alt="BCA Students working on projects" className="w-full h-full object-cover" />
-          </div> */}
+          <div className="rounded-lg overflow-hidden shadow-md h-64 md:h-auto">
+            <img src="https://scontent.fccu31-1.fna.fbcdn.net/v/t39.30808-6/473739492_1021246023361414_8102501947874081601_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=lmoMo4Sy9-8Q7kNvwHVHZI7&_nc_oc=Adnn-yFgbfvOyqbXBCYip9lmP5o7skY97ZGB2hwy5OJrBwhKrtoqb0H0E_fA52ru95Y&_nc_zt=23&_nc_ht=scontent.fccu31-1.fna&_nc_gid=QVXj9FU4SFWA4nqexyyluQ&oh=00_AfGfI1SXAGhdPy75OEEFAEQZnJrIlQpE29hjDCw-fCG6yA&oe=67F8840D" alt="BCA Students working on projects" className="w-full h-full object-cover" />
+          </div>
         </div>
       </div>
       
@@ -195,7 +204,70 @@ const BCACoursePage = () => {
       </div>
        */}
       {/* Placement Carousel */}
-      
+      <div className={`mb-12 transform transition-all duration-1000 delay-700 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-20 opacity-0'}`}>
+              <h2 className="text-3xl font-bold text-gray-800 mb-6">Placement Success Stories</h2>
+              
+              <div className="relative bg-white rounded-xl shadow-lg overflow-hidden">
+                {/* Carousel Navigation Buttons */}
+                <button 
+                  onClick={prevSlide}
+                  className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white p-2 rounded-full shadow-md z-10 hover:bg-gray-100 transition-colors duration-300"
+                >
+                  <ChevronLeft size={24} className="text-blue-600" />
+                </button>
+                
+                <button 
+                  onClick={nextSlide}
+                  className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white p-2 rounded-full shadow-md z-10 hover:bg-gray-100 transition-colors duration-300"
+                >
+                  <ChevronRight size={24} className="text-blue-600" />
+                </button>
+                
+                {/* Carousel Content */}
+                <div className="flex transition-transform duration-500 ease-in-out" style={{ transform: `translateX(-${currentSlide * 100}%)` }}>
+                  {placementData.map((item, index) => (
+                    <div key={index} className="w-full flex-shrink-0 p-8 md:p-12">
+                      <div className="flex flex-col md:flex-row items-center gap-8">
+                        <div className="w-32 h-32 rounded-full overflow-hidden bg-gray-200 flex-shrink-0">
+                          <img src={item.stuImg} alt={item.name} className="w-full h-full object-cover" />
+                        </div>
+                        
+                        <div className="flex-1">
+                          <div className="flex items-center mb-2">
+                            {[...Array(5)].map((_, i) => (
+                              <Star key={i} size={16} className="text-yellow-400 fill-current" />
+                            ))}
+                          </div>
+                          
+                          <blockquote className="text-gray-600 italic mb-4 text-lg">"{item.quote}"</blockquote>
+                          
+                          <div className="mt-4">
+                            <h3 className="font-bold text-xl">{item.name}</h3>
+                            <p className="text-blue-600">{item.role}</p>
+                            <div className="flex items-center mt-2">
+                              <div className="bg-gray-200 w-8 h-8 rounded-full overflow-hidden mr-2">
+                                <img src={item.compImg} alt={item.company} className="w-full h-full object-cover" />
+                              </div>
+                              <span className="text-gray-500">Package: {item.package}</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  ))}
+          </div>
+          {/* Carousel Indicators */}
+          <div className="flex justify-center p-4 gap-2">
+            {placementData.map((_, index) => (
+              <button 
+                key={index}
+                onClick={() => setCurrentSlide(index)}
+                className={`w-3 h-3 rounded-full transition-all duration-300 ${currentSlide === index ? 'bg-blue-600 w-6' : 'bg-gray-300'}`}
+              />
+            ))}
+          </div>
+        </div>
+      </div>
       
       {/* Campus Life Gallery */}
       {/* <div className={`mb-12 transform transition-all duration-1000 delay-900 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-20 opacity-0'}`}>
@@ -218,18 +290,20 @@ const BCACoursePage = () => {
       </div> */}
       
       {/* CTA */}
-      {/* <div className={`bg-blue-600 text-white p-8 rounded-lg shadow-lg text-center transform transition-all duration-1000 delay-1000 ${isVisible ? 'scale-100 opacity-100' : 'scale-95 opacity-0'}`}>
+      <div className={`bg-blue-600 text-white p-8 rounded-lg shadow-lg text-center transform transition-all duration-1000 delay-1000 ${isVisible ? 'scale-100 opacity-100' : 'scale-95 opacity-0'}`}>
         <h2 className="text-3xl font-bold mb-4">Ready to Start Your Tech Journey?</h2>
         <p className="text-lg mb-6">Applications for the next intake are now open. Join our vibrant community of future tech professionals.</p>
         <div className="flex justify-center gap-4 flex-wrap">
-          <button className="bg-white text-blue-600 hover:bg-blue-100 px-6 py-3 rounded-lg font-semibold transition-colors duration-300">
+          <Link to='/apply'>
+          <button className="bg-white text-blue-700 hover:bg-blue-600 hover:text-white hover:border-white border border-transparent cursor-pointer px-6 py-3 rounded-md font-medium text-lg transition-colors">
             Apply Now
           </button>
-          <button className="bg-transparent border-2 border-white hover:bg-blue-700 px-6 py-3 rounded-lg font-semibold transition-colors duration-300">
+        </Link>
+          {/* <button className="bg-transparent border-2 border-white hover:bg-blue-700 px-6 py-3 rounded-lg font-semibold transition-colors duration-300">
             Download Brochure
-          </button>
+          </button> */}
         </div>
-      </div> */}
+      </div>
     </div>
   );
 };

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { ChevronRight, Clock, Calendar, BookOpen, Monitor, Code, Database, ChevronLeft, Star, Users, Briefcase } from 'lucide-react';
-
+import { Link } from 'react-router-dom';
 const BBACoursePage = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -19,27 +19,33 @@ const BBACoursePage = () => {
   // Placement testimonials and company data
   const placementData = [
     {
-      name: "Suman De",
-      role: "Works at SSKM kolkata",
+      name: "Pritam Das",
+      stuImg: "https://randomuser.me/api/portraits/men/32.jpg",
+      role: "Works at Apollo kolkata",
       quote: "Biggest Hospital in Kolkata",
       company: "SSKM",
+      compImg: "https://cdn.worldvectorlogo.com/logos/apollo-hospitals.svg",
       package: "₹2.5 LPA",
       
     },
     {
-        name: "Suman De",
-        role: "Works at SSKM kolkata",
-        quote: "Biggest Hospital in Kolkata",
-        company: "SSKM",
-        package: "₹2.5 LPA",
+      name: "Suhadeep Maity",
+      stuImg: "https://randomuser.me/api/portraits/men/65.jpg",
+      role: "Works at SSKM kolkata",
+      quote: "Biggest Hospital in Kolkata",
+      company: "SSKM",
+      compImg: "https://www.svgrepo.com/show/3102/blood-drop.svg",
+      package: "₹2.5 LPA",
         
     },
     {
-        name: "Suman De",
-        role: "Works at SSKM kolkata",
-        quote: "Biggest Hospital in Kolkata",
-        company: "SSKM",
-        package: "₹2.5 LPA",
+      name: "Priyanka Jana",
+      stuImg: "https://randomuser.me/api/portraits/women/55.jpg",
+      role: "Works at SSKM kolkata",
+      quote: "Biggest Hospital in Kolkata",
+      company: "SSKM",
+      compImg: "https://www.svgrepo.com/show/7982/bed.svg",
+      package: "₹2.5 LPA",
         
     }
   ];
@@ -157,9 +163,9 @@ const BBACoursePage = () => {
             </div>
           </div>
           
-          {/* <div className="rounded-lg overflow-hidden shadow-md h-64 md:h-auto">
-            <img src="/api/placeholder/600/400" alt="BCA Students working on projects" className="w-full h-full object-cover" />
-          </div> */}
+          <div className="rounded-lg overflow-hidden shadow-md h-64 md:h-auto">
+            <img src="https://scontent.fccu31-1.fna.fbcdn.net/v/t39.30808-6/486167015_1207425394719620_4150723092700554704_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=127cfc&_nc_ohc=Ndy-e8Bk6cIQ7kNvwExkWQe&_nc_oc=Adl7b92cXdtCLv25oPOgj_i-uaU35NUuKFcAdpwBH7NhmsUhLmfwaJueTNx3_n-CXjw&_nc_zt=23&_nc_ht=scontent.fccu31-1.fna&_nc_gid=UwBbkGenM5Whl5531-l2Jw&oh=00_AfHjeANFE7narJwKo4QuBwJ1GAhEbNZj6uehBkxMjSDCyA&oe=67F89021" alt="BBA Students working on projects" className="w-full h-full object-cover" />
+          </div>
         </div>
       </div>
       
@@ -223,7 +229,7 @@ const BBACoursePage = () => {
               <div key={index} className="w-full flex-shrink-0 p-8 md:p-12">
                 <div className="flex flex-col md:flex-row items-center gap-8">
                   <div className="w-32 h-32 rounded-full overflow-hidden bg-gray-200 flex-shrink-0">
-                    <img src="/api/placeholder/128/128" alt={item.name} className="w-full h-full object-cover" />
+                    <img src={item.stuImg} alt={item.name} className="w-full h-full object-cover" />
                   </div>
                   
                   <div className="flex-1">
@@ -240,7 +246,7 @@ const BBACoursePage = () => {
                       <p className="text-blue-600">{item.role}</p>
                       <div className="flex items-center mt-2">
                         <div className="bg-gray-200 w-8 h-8 rounded-full overflow-hidden mr-2">
-                          <img src="/api/placeholder/32/32" alt={item.company} className="w-full h-full object-cover" />
+                          <img src={item.compImg} alt={item.company} className="w-full h-full object-cover" />
                         </div>
                         <span className="text-gray-500">Package: {item.package}</span>
                       </div>
@@ -285,18 +291,20 @@ const BBACoursePage = () => {
       </div> */}
       
       {/* CTA */}
-      {/* <div className={`bg-blue-600 text-white p-8 rounded-lg shadow-lg text-center transform transition-all duration-1000 delay-1000 ${isVisible ? 'scale-100 opacity-100' : 'scale-95 opacity-0'}`}>
+      <div className={`bg-blue-600 text-white p-8 rounded-lg shadow-lg text-center transform transition-all duration-1000 delay-1000 ${isVisible ? 'scale-100 opacity-100' : 'scale-95 opacity-0'}`}>
         <h2 className="text-3xl font-bold mb-4">Ready to Start Your Tech Journey?</h2>
         <p className="text-lg mb-6">Applications for the next intake are now open. Join our vibrant community of future tech professionals.</p>
         <div className="flex justify-center gap-4 flex-wrap">
-          <button className="bg-white text-blue-600 hover:bg-blue-100 px-6 py-3 rounded-lg font-semibold transition-colors duration-300">
+          <Link to='/apply'>
+          <button className="bg-white text-blue-700 hover:bg-blue-600 hover:text-white hover:border-white border border-transparent cursor-pointer px-6 py-3 rounded-md font-medium text-lg transition-colors">
             Apply Now
           </button>
-          <button className="bg-transparent border-2 border-white hover:bg-blue-700 px-6 py-3 rounded-lg font-semibold transition-colors duration-300">
+        </Link>
+          {/* <button className="bg-transparent border-2 border-white hover:bg-blue-700 px-6 py-3 rounded-lg font-semibold transition-colors duration-300">
             Download Brochure
-          </button>
+          </button> */}
         </div>
-      </div> */}
+      </div>
     </div>
   );
 };

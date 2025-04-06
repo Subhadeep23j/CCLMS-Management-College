@@ -23,7 +23,7 @@ const CourseComponent = () => {
       id: 1,
       title: "Bachelor of Computer Applications (BCA)",
       category: "Undergraduate",
-      duration: "3 Years",
+      duration: "3/4 Years",
       startDate: "August 2025",
       students: 120,
       rating: 4.8,
