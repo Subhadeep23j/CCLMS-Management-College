@@ -1,0 +1,86 @@
+.loader-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #EFF6FF;
+    z-index: 9999;
+    padding: 1rem;
+    box-sizing: border-box;
+  }
+  
+  .college-logo {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 2rem;
+    animation: bounce 1s infinite alternate;
+  }
+  
+  /* Make the logo smaller on very small screens */
+  @media (max-width: 360px) {
+    .college-logo {
+      width: 60px;
+      height: 60px;
+      margin-bottom: 1.5rem;
+    }
+  }
+  
+  @keyframes bounce {
+    from {
+      transform: translateY(0);
+    }
+    to {
+      transform: translateY(-10px);
+    }
+  }
+  
+  .college-name {
+    font-size: 1.875rem;
+    font-weight: bold;
+    color: #1E40AF;
+    margin-bottom: 1.5rem;
+    text-align: center;
+  }
+  
+  /* Make the text smaller on mobile screens */
+  @media (max-width: 640px) {
+    .college-name {
+      font-size: 1.5rem;
+      margin-bottom: 1.25rem;
+    }
+  }
+  
+  /* Even smaller text for very small screens */
+  @media (max-width: 360px) {
+    .college-name {
+      font-size: 1.25rem;
+      margin-bottom: 1rem;
+    }
+  }
+  
+  .progress-container {
+    width: 80%;
+    max-width: 16rem;
+    height: 0.5rem;
+    background-color: #E5E7EB;
+    border-radius: 9999px;
+    overflow: hidden;
+    margin-bottom: 0.5rem;
+  }
+  
+  .progress-bar {
+    height: 100%;
+    background-color: #2563EB;
+    transition: width 100ms ease-out;
+  }
+  
+  .loading-text {
+    color: #1E40AF;
+    font-weight: 500;
+    text-align: center;
+  }
