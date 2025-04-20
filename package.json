@@ -1,5 +1,7 @@
 {
-  "homepage": "https://github.com/Subhadeep23j/CCLMS-Management-College",
+  
+  "homepage": "https://portfolio-subhadeep.vercel.app",
+
   "name": "clg-web",
   "private": true,
   "version": "0.0.0",
