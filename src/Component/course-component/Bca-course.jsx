@@ -164,7 +164,7 @@ const BCACoursePage = () => {
           </div>
           
           <div className="rounded-lg overflow-hidden shadow-md h-64 md:h-auto">
-            <img src="https://scontent.fccu31-1.fna.fbcdn.net/v/t39.30808-6/473739492_1021246023361414_8102501947874081601_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=lmoMo4Sy9-8Q7kNvwHVHZI7&_nc_oc=Adnn-yFgbfvOyqbXBCYip9lmP5o7skY97ZGB2hwy5OJrBwhKrtoqb0H0E_fA52ru95Y&_nc_zt=23&_nc_ht=scontent.fccu31-1.fna&_nc_gid=QVXj9FU4SFWA4nqexyyluQ&oh=00_AfGfI1SXAGhdPy75OEEFAEQZnJrIlQpE29hjDCw-fCG6yA&oe=67F8840D" alt="BCA Students working on projects" className="w-full h-full object-cover" />
+            <img src="https://www.cclms.org/wp-content/uploads/2025/01/TAN_5528-scaled.jpg" alt="BCA Students working on projects" className="w-full h-full object-cover" />
           </div>
         </div>
       </div>
