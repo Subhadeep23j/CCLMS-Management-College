@@ -24,7 +24,7 @@ const Navbar = () => {
               />
               <div className="ml-1 hidden sm:block">
                 <span className="text-lg font-bold text-white">Contai College of Learning & Management Science</span>
-                <div className="text-xs text-blue-100">Affiliated to: MAKAUT, College Code: 340</div>
+                <div className="text-xs text-blue-100">Affiliated to: MAKAUT Kolkata, College Code: 340</div>
               </div>
               <div className="ml-1 sm:hidden">
                 <span className="text-base font-bold text-white text-xs">Contai College of Learning & Management Science</span>
