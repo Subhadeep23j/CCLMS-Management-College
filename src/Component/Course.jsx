@@ -2,7 +2,7 @@
 import { ChevronLeft, ChevronRight, Users, Clock, Calendar, Star } from 'lucide-react';
 import { Link, useNavigate } from 'react-router-dom';
 import React, { useState, useEffect, useRef } from 'react';
-import pic1 from '../assets/BCA.jpg'
+import pic1 from '../assets/bca.jpg'
 import pic2 from '../assets/BHM.jpg'
 import pic3 from '../assets/BBA.jpg'
 
