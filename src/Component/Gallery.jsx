@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import photo1 from '../assets/main-bulding.jpg'; // Example image import
 import photo2 from '../assets/sports.jpg'; // Example image import
-import photo3 from '../assets/Computerlab.jpg'; // Example image import
+import photo3 from '../assets/ComputerlAB.jpg'; // Example image import
 import photo4 from '../assets/Foodfas.jpg'; // Example image import
 import photo5 from '../assets/Library.jpg'; // Example image import
 import photo6 from '../assets/foodpro.jpg'; // Example image import
