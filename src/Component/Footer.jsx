@@ -87,7 +87,7 @@ const Footer = () => {
             &copy; {new Date().getFullYear()} Contai College. All rights reserved.
           </div>
           <div>
-          Designed & Developed by Team "Fool Developer"
+          Designed & Developed by Subhadeep Maity"
           </div>
         </div>
       </div>
